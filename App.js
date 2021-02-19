@@ -4,15 +4,25 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 import Hello from './Hello';
 
-export default function App() {
+export default class App extends React.Component {
+
+  constructor () {
+    super();
+    this.state = {
+      inputValue: "Hi"
+    }
+  }
+
+render() {
   return (
     <View style={styles.container}>
       <TextInput 
-        value="Hello"
+        value={this.state.inputValue}
         style={styles.input}
         />
     </View>
   );
+}
 }
 
 const styles = StyleSheet.create({
