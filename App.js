@@ -16,8 +16,12 @@ export default class App extends React.Component {
 render() {
   return (
     <View style={styles.container}>
+      <Text>
+        {this.state.inputValue}
+      </Text>
+      
       <TextInput 
-        value={this.state.inputValue}
+        value={this.state.inputValue} //this is what makes it a controled input
         style={styles.input}
         onChangeText={(text) => this.setState({inputValue: text})}
         />
@@ -29,11 +33,12 @@ render() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+  
+    
   },
   input: {
     height: 40,
