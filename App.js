@@ -9,7 +9,7 @@ export default class App extends React.Component {
   constructor () {
     super();
     this.state = {
-      inputValue: "Hi"
+      inputValue: '',
     }
   }
 
@@ -17,12 +17,14 @@ render() {
   return (
     <View style={styles.container}>
       <Text>
-        {this.state.inputValue}
+        {this.state.inputValue && parseFloat(this.state.inputValue)}
       </Text>
       
       <TextInput 
         value={this.state.inputValue} //this is what makes it a controled input
         style={styles.input}
+        keyboardType="numeric"
+        placeholder="0.00"
         onChangeText={(text) => this.setState({inputValue: text})}
         />
     </View>
