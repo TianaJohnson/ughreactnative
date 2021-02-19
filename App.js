@@ -17,7 +17,9 @@ render() {
   return (
     <View style={styles.container}>
       <Text>
-        {this.state.inputValue && parseFloat(this.state.inputValue)}
+        {this.state.inputValue &&
+           parseFloat(this.state.inputValue) * 0.2
+        }
       </Text>
       
       <TextInput 
