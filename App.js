@@ -7,7 +7,10 @@ import Hello from './Hello';
 export default function App() {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.input}/>
+      <TextInput 
+        value="Hello"
+        style={styles.input}
+        />
     </View>
   );
 }
