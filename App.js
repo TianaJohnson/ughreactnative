@@ -14,12 +14,18 @@ export default class App extends React.Component {
   }
 
 render() {
+
+  let tip = 0.00;
+  if(this.state.inputValue) {
+    tip = parseFloat(this.state.inputValue) * 0.2;
+    tip = (Math.round(tip * 100) / 100).toFixed(2);
+  }
+
+
   return (
     <View style={styles.container}>
       <Text>
-        {this.state.inputValue &&
-           parseFloat(this.state.inputValue) * 0.2
-        }
+        ${tip}
       </Text>
       
       <TextInput 
