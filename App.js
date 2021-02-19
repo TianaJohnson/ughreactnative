@@ -19,6 +19,7 @@ render() {
       <TextInput 
         value={this.state.inputValue}
         style={styles.input}
+        onChangeText={(text) => this.setState({inputValue: text})}
         />
     </View>
   );
