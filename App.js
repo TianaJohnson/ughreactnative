@@ -8,16 +8,17 @@ export default class App extends React.Component {
 
   constructor () {
     super();
-    this.state = {
-      inputValue: '',
-    }
+      this.state = {
+        inputValue: '',
+        tip: 0.2,
+      }
   }
 
 render() {
 
   let tip = 0.00;
   if(this.state.inputValue) {
-    tip = parseFloat(this.state.inputValue) * 0.2;
+    tip = parseFloat(this.state.inputValue) * this.state.tip;
     tip = (Math.round(tip * 100) / 100).toFixed(2);
   }
 
