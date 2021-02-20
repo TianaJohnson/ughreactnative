@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
-import { Container, Content, Header} from "native-base";
+import { Container, Content, Header, Left, Body, Title, Right} from "native-base";
 
 import Hello from "./Hello";
 
@@ -33,6 +33,13 @@ export default class App extends React.Component {
 
     return (
       <Container>
+         <Header>
+          <Left/>
+          <Body>
+            <Title>Header</Title>
+          </Body>
+          <Right />
+        </Header>
         <Content padder>
         <View style={styles.container}>
           <Text>${tip}</Text>
