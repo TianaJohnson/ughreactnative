@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import { Container, Content, Header} from "native-base";
 
 import Hello from "./Hello";
 
@@ -18,11 +19,10 @@ export default class App extends React.Component {
       this.setState({
         tip: parseFloat(customTip) / 100,
       });
-  } else {
-    this.setState({ tip: 0});
-
+    } else {
+      this.setState({ tip: 0 });
+    }
   }
-}
 
   render() {
     let tip = 0.0;
@@ -32,28 +32,32 @@ export default class App extends React.Component {
     }
 
     return (
-      <View style={styles.container}>
-        <Text>${tip}</Text>
+      <Container>
+        <Content padder>
+        <View style={styles.container}>
+          <Text>${tip}</Text>
 
-        <TextInput
-          value={this.state.inputValue} //this is what makes it a controled input
-          style={styles.input}
-          keyboardType="numeric"
-          placeholder="0.00"
-          onChangeText={(text) => this.setState({ inputValue: text })}
-        />
-        <View style={styles.buttonGroup}>
-          <Button title="10%" onPress={() => this.setState({ tip: 0.1 })} />
-          <Button title="20%" onPress={() => this.setState({ tip: 0.2 })} />
-          <Button title="25%" onPress={() => this.setState({ tip: 0.25 })} />
           <TextInput
-            style={styles.customTip}
-            value={(this.state.tip * 100).toString()}
+            value={this.state.inputValue} //this is what makes it a controled input
+            style={styles.input}
             keyboardType="numeric"
-            onChangeText={(customTip) => this.updateCustomTip(customTip)}
+            placeholder="0.00"
+            onChangeText={(text) => this.setState({ inputValue: text })}
           />
+          <View style={styles.buttonGroup}>
+            <Button title="10%" onPress={() => this.setState({ tip: 0.1 })} />
+            <Button title="20%" onPress={() => this.setState({ tip: 0.2 })} />
+            <Button title="25%" onPress={() => this.setState({ tip: 0.25 })} />
+            <TextInput
+              style={styles.customTip}
+              value={(this.state.tip * 100).toString()}
+              keyboardType="numeric"
+              onChangeText={(customTip) => this.updateCustomTip(customTip)}
+            />
+          </View>
         </View>
-      </View>
+        </Content>
+      </Container>
     );
   }
 }
@@ -63,8 +67,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
-    padding: 20,
   },
   input: {
     height: 40,
@@ -82,5 +84,5 @@ const styles = StyleSheet.create({
     borderColor: "#333",
     borderWidth: 1,
     padding: 5,
-  }
+  },
 });
