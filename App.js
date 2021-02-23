@@ -42,7 +42,7 @@ export default class App extends React.Component {
         </Header>
         <Content padder>
         <View style={styles.container}>
-          {/* <Hello/> */}
+          <Hello/>
           <Text>${tip}</Text>
 
           <TextInput
