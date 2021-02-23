@@ -5,7 +5,7 @@ export default class Hello extends React.Component {
     render () {
         return (
             <View>
-               <Text style={styles.hello}>Hello from Hello.js</Text>
+               <Text style={styles.hello}>Hello Android</Text>
             </View>
         )
     }
