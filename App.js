@@ -1,7 +1,7 @@
 // import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
-import { Container, Content, Header, Left, Body, Title, Right, StatusBar} from "native-base";
+import { Container, Content, Header, Left, Body, Title, Right, StatusBar, Platform} from "native-base";
 
 import Hello from "./Hello";
 
@@ -15,6 +15,12 @@ export default class App extends React.Component {
   }
 
   updateCustomTip(customTip) {
+  
+    // if (Platform.OS === 'ios') {
+
+    // }
+
+
     if (customTip) {
       this.setState({
         tip: parseFloat(customTip) / 100,
@@ -73,6 +79,14 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  header: {
+    ...Platform.selet({
+      android: {
+        marginTop: StatusBar.currentHeight,
+      },
+    }),
+ 
+  },
   container: {
     flex: 1,
     backgroundColor: "#fff",
@@ -95,7 +109,5 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 5,
   },
-  header: {
-    marginTop: 20,
-  }
+  
 });
