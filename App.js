@@ -1,9 +1,8 @@
 // import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
+import { StyleSheet, Text, View, TextInput, Button} from "react-native";
 import { Container, Content} from "native-base";
 
-// import Hello from "./Hello";
 import Head from './ui/Head';
 
 export default class App extends React.Component {
@@ -16,10 +15,6 @@ export default class App extends React.Component {
   }
 
   updateCustomTip(customTip) {
-  
-    // if (Platform.OS === 'ios') {
-
-    // }
 
 
     if (customTip) {
@@ -31,19 +26,7 @@ export default class App extends React.Component {
     }
   }
 
-  alert() {
-    Alert.alert(
-      'Hi',
-      'This alert does NOTHING!',
-      [{
-          text: 'Okay',
-          onPress: () => console.log('Hit okay')
-        }, {
-          text: 'Cancel',
-          onPress: () => console.log('Hit Cancel')
-        }],
-    );
-  }
+
 
   render() {
     let tip = 0.0;
@@ -57,8 +40,6 @@ export default class App extends React.Component {
         <Head/>
         <Content padder>
         <View style={styles.container}>
-        <Button title=" Alert " onPress={this.alert} />
-
           <Text>${tip}</Text>
 
           <TextInput
