@@ -39,15 +39,6 @@ export default class App extends React.Component {
 
     return (
       <Container>
-        <View style={styles.header}>
-         <Header>       
-          <Left/>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right />
-        </Header>
-        </View>
         <Content padder>
         <View style={styles.container}>
           {/* <Hello/> */}
@@ -79,13 +70,6 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  // header: {
-  //   ...Platform.select({
-  //     android: {
-  //       marginTop: StatusBar.currentHeight,
-  //     },
-  //   }),
-  // },
   container: {
     flex: 1,
     backgroundColor: "#fff",
