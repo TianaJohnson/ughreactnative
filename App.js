@@ -1,6 +1,6 @@
 // import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import { StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
 import { Container, Content} from "native-base";
 
 // import Hello from "./Hello";
@@ -31,6 +31,13 @@ export default class App extends React.Component {
     }
   }
 
+  alert() {
+    Alert.alert(
+      'Hi',
+      ''
+    )
+  }
+
   render() {
     let tip = 0.0;
     if (this.state.inputValue) {
@@ -43,7 +50,8 @@ export default class App extends React.Component {
         <Head/>
         <Content padder>
         <View style={styles.container}>
-          {/* <Hello/> */}
+        <Button title=" Alert " onPress={this.alert} />
+
           <Text>${tip}</Text>
 
           <TextInput
