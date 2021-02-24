@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, StatusBar, Platform } from "react-native";
+import { StyleSheet, View } from "react-native";
 import {
   Header,
   Left,
@@ -28,11 +28,11 @@ export default class Head extends Component {
 
 
 const styles = StyleSheet.create({
-    header: {
-      ...Platform.select({
-        android: {
-          marginTop: StatusBar.currentHeight,
-        },
-      }),
-    }
+    // header: {
+    //   ...Platform.select({
+    //     android: {
+    //       marginTop: StatusBar.currentHeight,
+    //     },
+    //   }),
+    // }
 });
