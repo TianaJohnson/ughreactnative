@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TextInput, Button} from "react-native";
 import { Container, Content} from "native-base";
 
 import Head from './ui/Head';
+import Values from './ui/Values';
 
 export default class App extends React.Component {
   constructor() {
@@ -29,18 +30,18 @@ export default class App extends React.Component {
 
 
   render() {
-    let tip = 0.0;
-    if (this.state.inputValue) {
-      tip = parseFloat(this.state.inputValue) * this.state.tip;
-      tip = (Math.round(tip * 100) / 100).toFixed(2);
-    }
+   
 
     return (
       <Container>
         <Head/>
         <Content padder>
         <View style={styles.container}>
-          <Text>${tip}</Text>
+
+         <Values 
+          tipPercent={this.state.tip}
+          bill={this.state.inputValue}
+          />
 
           <TextInput
             value={this.state.inputValue} //this is what makes it a controled input
