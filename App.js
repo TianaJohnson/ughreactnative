@@ -79,14 +79,13 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  header: {
-    ...Platform.selet({
-      android: {
-        marginTop: StatusBar.currentHeight,
-      },
-    }),
- 
-  },
+  // header: {
+  //   ...Platform.select({
+  //     android: {
+  //       marginTop: StatusBar.currentHeight,
+  //     },
+  //   }),
+  // },
   container: {
     flex: 1,
     backgroundColor: "#fff",
