@@ -1,6 +1,6 @@
 // import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Button} from "react-native";
+import { StyleSheet, View, TextInput, Button} from "react-native";
 import { Container, Content} from "native-base";
 
 import Head from './ui/Head';

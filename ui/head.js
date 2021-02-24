@@ -28,8 +28,9 @@ export default class Head extends Component {
 const styles = StyleSheet.create({
     header: {
       ...Platform.select({
-        android: {
+        ios: {
           marginTop: StatusBar.currentHeight,
+          backgroundColor: '#fc5e03',
         },
       }),
     }
