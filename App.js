@@ -34,7 +34,15 @@ export default class App extends React.Component {
   alert() {
     Alert.alert(
       'Hi',
-      ''
+      'This alert does NOTHING!',
+      [
+        {
+          text: 'OKAY',
+          onPress: () => console.log('Hit okay')
+        },{
+          text: 'Cancel',
+          onPress: () => console.log('Hit Cancel')
+        }]
     )
   }
 
