@@ -14,16 +14,16 @@ const Values = ({ tipPercent, bill}) => {
 
     return (
         <View style={styles.values}>
-            <Text>
+            <Text style={styles.label}>
                 Tip Amount
             </Text>
-             <Text>
+             <Text style={styles.tip}>
                  ${tip}
              </Text>
-             <Text>
+             <Text style={styles.label}>
                  Total Bill
              </Text>
-             <Text>
+             <Text style={styles.total}>
                  ${total}
              </Text>
         </View>
@@ -35,7 +35,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 20,
         backgroundColor: '#484848',
-        width: 100%,
+        width: '100%',
+    },
+    Label: {
+        color: '#FFF'
+    },
+    tip: {
+        fontSize: 60,
+        color: '#FFF',
+        fontWeight: 'Bold',
+    },
+    total: {
+        fontSize: 30,
+        color: '#FFF',
+        fontWeight: 'Bold',
     }
 })
 
