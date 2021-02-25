@@ -30,7 +30,7 @@ export default class App extends React.Component {
       <Container>
         <Head />
         <View style={styles.container}>
-          <Content style={{ width: '100%'}}>
+          <Content style={{ width: "100%" }}>
             <Values tipPercent={this.state.tip} bill={this.state.inputValue} />
             <View style={styles.inputs}>
             <TextInput
