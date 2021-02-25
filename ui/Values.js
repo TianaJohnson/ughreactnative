@@ -7,9 +7,9 @@ const Values = ({ tipPercent, bill}) => {
     let total = 0.00;
     if (bill) {
       tip = parseFloat(bill) * tipPercent;
-      total = parseFloat(bill) * tip;
+      total = parseFloat(bill) + tip;
       tip = (Math.round(tip * 100) / 100).toFixed(2);
-      total = (Math.round(tip * 100) / 100).toFixed(2);
+      total = (Math.round(total * 100) / 100).toFixed(2);
     }
 
     return (
