@@ -37,18 +37,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#484848',
         width: '100%',
     },
-    Label: {
+    label: {
         color: '#FFF'
     },
     tip: {
         fontSize: 60,
         color: '#FFF',
-        fontWeight: 'Bold',
+        fontWeight: 'bold',
     },
     total: {
         fontSize: 30,
         color: '#FFF',
-        fontWeight: 'Bold',
+        fontWeight: 'bold',
     }
 })
 

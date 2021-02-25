@@ -35,7 +35,7 @@ export default class App extends React.Component {
     return (
       <Container>
         <Head/>
-        <Content padder>
+        <Content >
         <View style={styles.container}>
 
          <Values 
