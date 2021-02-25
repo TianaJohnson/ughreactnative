@@ -30,14 +30,16 @@ export default class App extends React.Component {
       <Container>
         <Head />
         <View style={styles.container}>
-          <Content>
+          <Content style={{ width: '100%'}}>
             <Values tipPercent={this.state.tip} bill={this.state.inputValue} />
-
+            <View style={styles.inputs}>
             <TextInput
               value={this.state.inputValue} //this is what makes it a controled input
               style={styles.input}
               keyboardType="numeric"
               placeholder="0.00"
+              underlineColorAndroid="#FFF"
+              placeholderTextColor="#FFF"
               onChangeText={(text) => this.setState({ inputValue: text })}
             />
             <View style={styles.buttonGroup}>
@@ -54,6 +56,7 @@ export default class App extends React.Component {
                 onChangeText={(customTip) => this.updateCustomTip(customTip)}
               />
             </View>
+            </View>
           </Content>
         </View>
       </Container>
@@ -69,21 +72,23 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
   },
+  inputs: {
+    backgroundColor: '#212121',
+    padding: 20,
+  },
   input: {
     height: 40,
     width: "100%",
-    borderColor: "#333",
-    borderWidth: 1,
     padding: 5,
+    color: '#FFF'
   },
   buttonGroup: {
     flexDirection: "row",
+    justifyContent: 'space-between'
   },
   customTip: {
-    height: 30,
+    height: 40,
     width: 60,
-    borderColor: "#333",
-    borderWidth: 1,
     padding: 5,
   },
 });

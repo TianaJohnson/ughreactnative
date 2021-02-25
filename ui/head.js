@@ -8,9 +8,7 @@ import {
   Right,
 } from "native-base";
 
-export default class Head extends Component {
-  render() {
-    return (
+const Head = () => (
       <View style={styles.header}>
         <Header>
           <Left />
@@ -20,9 +18,9 @@ export default class Head extends Component {
           <Right />
         </Header>
       </View>
-    );
-  }
-}
+);
+
+export default Head
 
 
 const styles = StyleSheet.create({
