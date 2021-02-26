@@ -1,5 +1,6 @@
 {
   "expo": {
+    "sdkVersion":"17.0.0",
     "name": "DoneWithIt",
     "slug": "DoneWithIt",
     "version": "1.0.0",
@@ -17,9 +18,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tipcalc"
     },
     "android": {
+      "package": "com.tipcalc",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
