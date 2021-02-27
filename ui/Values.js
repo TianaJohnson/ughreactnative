@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 const Values = ({ tipPercent, bill}) => {
