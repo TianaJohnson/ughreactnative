@@ -8,7 +8,7 @@ import {
   Right,
 } from "native-base";
 
-// having issues with emulatores
+
 
 const Head = () => (
       <View style={styles.header}>
