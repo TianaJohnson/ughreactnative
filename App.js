@@ -63,7 +63,7 @@ export default class App extends React.Component {
     );
   }
 }
-///kjbkjkjb;
+
 
 const styles = StyleSheet.create({
   container: {
@@ -94,3 +94,5 @@ const styles = StyleSheet.create({
     padding: 5,
   },
 });
+
+// I need to figure this out"
