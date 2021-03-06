@@ -2,10 +2,14 @@ import React from 'react'
 
 export const button = () => {
     return (
-        <div>
-            <button>
+        <View style={styles.container}>
+            <button style={styles.button}>
                 Push
             </button> 
-        </div>
+        </View>
     )
 }
+
+const styles = StyleSheet.create({
+
+})
