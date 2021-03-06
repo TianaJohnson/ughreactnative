@@ -11,5 +11,7 @@ export const button = () => {
 }
 
 const styles = StyleSheet.create({
-
+    button: {
+        color: "#5c32a8",
+      },
 })
