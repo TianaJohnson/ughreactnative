@@ -13,5 +13,9 @@ export const button = () => {
 const styles = StyleSheet.create({
     button: {
         color: "#5c32a8",
+        height: 40,
+        width: 50,
+        border: 1,
+        fontWeight: 'bold',
       },
 })
